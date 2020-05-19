@@ -16,6 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from appc import views
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^create_worker_add/', views.create_worker_add),
+    url(r'^create_worker_multi/', views.create_worker_multi),
+    url(r'^create_eta_worker/', views.create_eta_worker),
+    url(r'^get_result/', views.get_result),
 ]
